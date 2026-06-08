@@ -22,4 +22,5 @@
 .env
 /specs
 /questions
+/tasks
 /.ai
