@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(./.env)"
+    ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pnpm lint",
+            "statusMessage": "Running lint..."
+          },
+          {
+            "type": "command",
+            "command": "pnpm format",
+            "statusMessage": "Formatting code..."
+          }
+        ]
+      }
+    ]
+  }
+}

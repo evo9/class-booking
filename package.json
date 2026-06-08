@@ -1,0 +1,31 @@
+{
+  "name": "class-booking",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=24.16.0"
+  },
+  "scripts": {
+    "dev": "pnpm --parallel --filter @class-booking/contracts --filter api --filter web run dev",
+    "dev:api": "pnpm --filter api run start:dev",
+    "dev:web": "pnpm --filter web run start",
+    "build": "pnpm --filter @class-booking/contracts run build && pnpm --parallel --filter api --filter web run build",
+    "build:api": "pnpm --filter api run build",
+    "build:web": "pnpm --filter web run build",
+    "test": "pnpm --recursive run test",
+    "test:api": "pnpm --filter api run test",
+    "test:e2e": "pnpm --filter api run test:e2e",
+    "lint": "pnpm --recursive run lint",
+    "format": "prettier --write \"apps/**/*.{ts,html,scss,json}\" \"packages/**/*.ts\"",
+    "db:up": "docker compose up -d postgres",
+    "db:down": "docker compose down",
+    "migration:diff": "pnpm --filter api run migration:diff",
+    "migration:migrate": "pnpm --filter api run migration:migrate",
+    "migration:create": "pnpm --filter api run migration:create",
+    "migration:revert": "pnpm --filter api run migration:revert"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.0"
+  }
+}
