@@ -6,17 +6,27 @@ A full-stack application for enrolling attendees into capacity-limited class ses
 
 The architecture decisions below are the point. The booking feature is the vehicle.
 
+[![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)](https://nestjs.com/)
+[![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![TypeORM](https://img.shields.io/badge/TypeORM-FE0803?style=for-the-badge&logo=typeorm&logoColor=white)](https://typeorm.io/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![pnpm](https://img.shields.io/badge/pnpm-F69220?style=for-the-badge&logo=pnpm&logoColor=white)](https://pnpm.io/)
+[![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)](https://jestjs.io/)
+
 ---
 
 ## Tech stack
 
-| Layer    | Technology                                                 |
-|----------|------------------------------------------------------------|
-| Backend  | NestJS, TypeScript, DDD/CQRS (`@nestjs/cqrs`)              |
-| Database | PostgreSQL + TypeORM (migrations, optimistic locking)      |
-| Auth     | JWT in `httpOnly` cookie, argon2 password hashing          |
-| Frontend | Angular 22 (standalone components, signals, OnPush)        |
-| Monorepo | pnpm workspaces, shared `@class-booking/contracts` package |
+| Layer    | Technology                                                                                                                                                               |
+|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Backend  | [NestJS](https://nestjs.com/), [TypeScript](https://www.typescriptlang.org/), DDD/CQRS ([@nestjs/cqrs](https://docs.nestjs.com/recipes/cqrs))                           |
+| Database | [PostgreSQL](https://www.postgresql.org/) + [TypeORM](https://typeorm.io/) (migrations, optimistic locking)                                                             |
+| Auth     | [JWT](https://jwt.io/) in `httpOnly` cookie, [argon2](https://github.com/ranisalt/node-argon2) password hashing                                                         |
+| Frontend | [Angular 22](https://angular.dev/) (standalone components, signals, OnPush), [Tailwind CSS](https://tailwindcss.com/)                                                   |
+| Monorepo | [pnpm workspaces](https://pnpm.io/workspaces), shared `@class-booking/contracts` package                                                                                |
 
 ---
 
